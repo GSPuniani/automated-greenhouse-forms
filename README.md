@@ -1,4 +1,4 @@
-<h1>Automated greenhouse.io Forms</h1>
+<h1 align="center">Automated greenhouse.io Forms</h1>
 
 <p align="center">
     <!-- code size  -->
@@ -30,16 +30,18 @@ This project is an attempt to automate the process of filling out these greenhou
 
 ## Requirements
 
-| Platform | Minimum Swift Version | Installation | Status |
-| --- | --- | --- | --- |
-| iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+ | 5.1 | [CocoaPods](#cocoapods), [Carthage](#carthage), [Swift Package Manager](#swift-package-manager), [Manual](#manually) | Fully Tested |
-| Linux | Latest Only | [Swift Package Manager](#swift-package-manager) | Building But Unsupported |
-| Windows | Latest Only | [Swift Package Manager](#swift-package-manager) | Building But Unsupported |
+The installation instructions are for machines running macOS (e.g. MacBook, MacBook Pro, iMac, etc.). This project has not been tested on devices running other operating systems, but the script should be able to work after making some minor modifications.
 
 
-## Installation
+## Download, Install, and Run
 
-### Customization
+Here is a step-by-step guide for downloading, installing, and running this project. This is meant to be a set of exhaustive instructions to allow anyone to use this project, regardless of experience with Terminal or running code.
+
+### Download
+
+### Set Up .env File
+
+### Change Browser
 
 There are currently three options for your browser choice: Safari, Chrome, and Firefox. You can run the script as is if you want to use Firefox, since it is the default option. If you would prefer to use Safari or Chrome, follow the respective instructions below.
 
@@ -55,7 +57,12 @@ There are currently three options for your browser choice: Safari, Chrome, and F
 
 - Uncomment this line: `browser = webdriver.Chrome()`. (Uncommenting a line means removing the hashtag and empty space from its immediate left.) 
 - Comment out this line: `browser = webdriver.Firefox()`. (Commenting out a line means adding a hashtag to its immediate left.)
-- 
+- Download the appropriate version of ChromeDriver by finding the one that matches your system [here](https://chromedriver.chromium.org/downloads).
+    - Unless you feel comfortable modifying the `chromedriver_location` line of the script, you should save the downloaded file in your Downloads folder. 
+- In the `.env` file that you set up earlier, change the value for `USER` to match your username for logging on to your machine. If you are unsure what your username is, then click the Apple logo on the far-left of the menu bar at the top of the screen, and look for the name at the bottom of the menu immediately to the right of "Log Out". 
+
+
+### Run
 
 ## License
 
