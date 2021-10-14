@@ -15,10 +15,8 @@
 
 
 - [Project Overview](#project-overview)
-- [Component Libraries](#component-libraries)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [FAQ](#faq)
 - [License](#license)
 
 
@@ -106,19 +104,6 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 - And that's it!
 
   > The `Alamofire.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
-
-## Contributing
-
-Before contributing to Alamofire, please read the instructions detailed in our [contribution guide](https://github.com/Alamofire/Alamofire/blob/master/CONTRIBUTING.md).
-
-
-
-
-## FAQ
-
-### What's the origin of the name Alamofire?
-
-Alamofire is named after the [Alamo Fire flower](https://aggie-horticulture.tamu.edu/wildseed/alamofire.html), a hybrid variant of the Bluebonnet, the official state flower of Texas.
 
 
 
