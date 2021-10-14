@@ -13,47 +13,21 @@
     <img src="https://img.shields.io/github/last-commit/GSPuniani/automated-greenhouse-forms" />
 </p>
 
-Alamofire is an HTTP networking library written in Swift.
 
-- [Features](#features)
+- [Project Overview](#project-overview)
 - [Component Libraries](#component-libraries)
 - [Requirements](#requirements)
-- [Migration Guides](#migration-guides)
-- [Communication](#communication)
 - [Installation](#installation)
-- [Contributing](#contributing)
-- [Usage](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#using-alamofire)
-    - [**Introduction -**](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#introduction) [Making Requests](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#making-requests), [Response Handling](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#response-handling), [Response Validation](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#response-validation), [Response Caching](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#response-caching)
-	- **HTTP -** [HTTP Methods](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#http-methods), [Parameters and Parameter Encoder](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md##request-parameters-and-parameter-encoders), [HTTP Headers](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#http-headers), [Authentication](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#authentication)
-	- **Large Data -** [Downloading Data to a File](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#downloading-data-to-a-file), [Uploading Data to a Server](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#uploading-data-to-a-server)
-	- **Tools -** [Statistical Metrics](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#statistical-metrics), [cURL Command Output](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#curl-command-output)
-- [Advanced Usage](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md)
-	- **URL Session -** [Session Manager](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#session), [Session Delegate](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#sessiondelegate), [Request](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#request)
-	- **Routing -** [Routing Requests](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#routing-requests), [Adapting and Retrying Requests](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#adapting-and-retrying-requests-with-requestinterceptor)
-	- **Model Objects -** [Custom Response Handlers](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#customizing-response-handlers)
-	- **Connection -** [Security](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#security), [Network Reachability](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#network-reachability)
-- [Open Radars](#open-radars)
 - [FAQ](#faq)
-- [Credits](#credits)
-- [Donations](#donations)
 - [License](#license)
 
-## Features
 
-- [x] Chainable Request / Response Methods
-- [x] Combine Support
-- [x] URL / JSON Parameter Encoding
-- [x] Upload File / Data / Stream / MultipartFormData
-- [x] Download File using Request or Resume Data
-- [x] Authentication with `URLCredential`
-- [x] HTTP Response Validation
-- [x] Upload and Download Progress Closures with Progress
-- [x] cURL Command Output
-- [x] Dynamically Adapt and Retry Requests
-- [x] TLS Certificate and Public Key Pinning
-- [x] Network Reachability
-- [x] Comprehensive Unit and Integration Test Coverage
-- [x] [Complete Documentation](https://alamofire.github.io/Alamofire)
+## Project Overview
+
+Many job application forms are hosted on a subdomain of greenhouse.io. However, the process of filling out forms on greenhouse.io can be unnecessarily time-consuming and tedious. Job applicants must manually type out their personal information for each application. Unfortunately, it is not possible to save this information because applicants cannot create accounts on greenhouse.io (only recruiters can). 
+
+This project is an attempt to automate the process of filling out these greenhouse.io forms. Instructions for downloading and running the Python script are included below.
+
 
 
 ## Requirements
