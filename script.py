@@ -1,6 +1,7 @@
 # Web form automation
 from selenium import webdriver 
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.webdriver.support.ui import Select
 # Accessing environment variables
 # from dotenv import load_dotenv
 # load_dotenv()
@@ -47,14 +48,32 @@ email.send_keys(info['email'])
 # Phone
 phone = browser.find_element_by_xpath('//*[@id="phone"]')
 # phone.send_keys('(559) 392-2944')
-phone.send_keys(info['phone'])
+if phone:
+    phone.send_keys(info['phone'])
 
 # City
 city = browser.find_element_by_xpath('//*[@id="job_application_location"]')
 # city.send_keys('Clovis')
-city.send_keys(info['city'])
+if city:
+    city.send_keys(info['city'])
 
 # LinkedIn
 linkedin = browser.find_element_by_xpath('//*[@id="job_application_answers_attributes_15_text_value"]')
 # linkedin.send_keys('https://www.linkedin.com/in/gobind-puniani/')
-linkedin.send_keys(info['linkedin'])
+if linkedin:
+    linkedin.send_keys(info['linkedin'])
+
+# School
+school = browser.find_element_by_xpath('//*[@id="s2id_autogen1"]')
+if school:
+    school.send_keys(info['school'])
+
+# Degree 
+degree = Select(browser.find_element_by_id('education_degree_0'))
+degree.select_by_visible_text(info['degree'])
+
+# Discipline
+
+# Start Date
+
+# End Date
