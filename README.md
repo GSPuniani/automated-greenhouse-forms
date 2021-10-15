@@ -16,7 +16,7 @@
 
 - [Project Overview](#project-overview)
 - [Requirements](#requirements)
-- [Installation](#installation)
+- [Download, Install, and Run](#download,-install,-and-run)
 - [License](#license)
 
 
@@ -46,6 +46,16 @@ On this page, click the arrow on the green "Code" button towards the top-right, 
 ### Set Up config.yml File
 
 After opening the project in Visual Studio Code (or any other IDE), rename the `template.yml` file to `config.yml` by hitting the control key and clicking simultaneously (control + click). Then, fill in the appropriate values between each pair of double-quotes as you would for the actual form (first name, last name, etc.). Note that values for drop-down menus must match an exact value as it appears in the form. 
+
+
+### Install Necessary Packages
+
+This project uses [Python 3](https://www.python.org/downloads/), along with two third-party modules: `Selenium` and `PyYAML`. To install these two modules, first click and drag upwards from the blue bar at the bottom of the Visual Studio Code window to bring up the Terminal. In the Terminal, type the following commands (wait until the first one is completed before typing the next command):
+`pip3 install selenium`
+`pip3 install pyyaml`
+
+The `Selenium` module allows us to automate the filling out of web forms, and the `PyYAML` module allows us to use YAML files in our Python project.
+
 
 ### Change Browser
 
