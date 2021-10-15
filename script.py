@@ -79,3 +79,34 @@ end_year = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fi
 if end_year:
     end_year.send_keys(info['end_year'])
 
+# gpa_undergrad
+gpa_undergrad = Select(browser.find_element_by_id('job_application_answers_attributes_1_answer_selected_options_attributes_1_question_option_id'))
+gpa_undergrad.select_by_visible_text(info['gpa_undergrad'])
+
+# gpa_grad
+gpa_grad = Select(browser.find_element_by_id('job_application_answers_attributes_2_answer_selected_options_attributes_2_question_option_id'))
+gpa_grad.select_by_visible_text(info['gpa_grad'])
+
+# gpa_doctorate
+gpa_doctorate = Select(browser.find_element_by_id('job_application_answers_attributes_3_answer_selected_options_attributes_3_question_option_id'))
+gpa_doctorate.select_by_visible_text(info['gpa_doctorate'])
+
+# sat_score
+sat_score = Select(browser.find_element_by_id('job_application_answers_attributes_4_answer_selected_options_attributes_4_question_option_id'))
+sat_score.select_by_visible_text(info['sat_score'])
+
+# act_score
+act_score = Select(browser.find_element_by_id('job_application_answers_attributes_5_answer_selected_options_attributes_5_question_option_id'))
+act_score.select_by_visible_text(info['act_score'])
+
+# gre_score
+gre_score = Select(browser.find_element_by_id('job_application_answers_attributes_6_answer_selected_options_attributes_6_question_option_id'))
+gre_score.select_by_visible_text(info['gre_score'])
+
+# gmat_score
+gmat_score = Select(browser.find_element_by_id('job_application_answers_attributes_7_answer_selected_options_attributes_7_question_option_id'))
+gmat_score.select_by_visible_text(info['gmat_score'])
+
+# spacex_history
+spacex_history = Select(browser.find_element_by_id('job_application_answers_attributes_8_answer_selected_options_attributes_8_question_option_id'))
+spacex_history.select_by_visible_text(info['spacex_history'])
