@@ -51,9 +51,9 @@ if linkedin:
     linkedin.send_keys(info['linkedin'])
 
 # School
-school = browser.find_element_by_xpath('//*[@id="s2id_autogen1"]')
-if school:
-    school.send_keys(info['school'])
+# school = browser.find_element_by_xpath('//*[@id="s2id_autogen1"]')
+# if school:
+#     school.send_keys(info['school'])
 
 # Degree 
 degree = Select(browser.find_element_by_id('education_degree_0'))
@@ -78,6 +78,9 @@ if end_month:
 end_year = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[5]/fieldset/input[2]')
 if end_year:
     end_year.send_keys(info['end_year'])
+
+# Confirm all information is true by clicking checkbox
+browser.find_element_by_xpath('//*[@id="job_application_answers_attributes_0_answer_selected_options_attributes_0_question_option_id"]').click()
 
 # Undergraduate GPA
 gpa_undergrad = Select(browser.find_element_by_id('job_application_answers_attributes_1_answer_selected_options_attributes_1_question_option_id'))
