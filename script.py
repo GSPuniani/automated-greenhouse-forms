@@ -79,34 +79,73 @@ end_year = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fi
 if end_year:
     end_year.send_keys(info['end_year'])
 
-# gpa_undergrad
+# Undergraduate GPA
 gpa_undergrad = Select(browser.find_element_by_id('job_application_answers_attributes_1_answer_selected_options_attributes_1_question_option_id'))
 gpa_undergrad.select_by_visible_text(info['gpa_undergrad'])
 
-# gpa_grad
+# Graduate GPA
 gpa_grad = Select(browser.find_element_by_id('job_application_answers_attributes_2_answer_selected_options_attributes_2_question_option_id'))
 gpa_grad.select_by_visible_text(info['gpa_grad'])
 
-# gpa_doctorate
+# Doctorate GPA
 gpa_doctorate = Select(browser.find_element_by_id('job_application_answers_attributes_3_answer_selected_options_attributes_3_question_option_id'))
 gpa_doctorate.select_by_visible_text(info['gpa_doctorate'])
 
-# sat_score
+# SAT Score
 sat_score = Select(browser.find_element_by_id('job_application_answers_attributes_4_answer_selected_options_attributes_4_question_option_id'))
 sat_score.select_by_visible_text(info['sat_score'])
 
-# act_score
+# ACT Score
 act_score = Select(browser.find_element_by_id('job_application_answers_attributes_5_answer_selected_options_attributes_5_question_option_id'))
 act_score.select_by_visible_text(info['act_score'])
 
-# gre_score
+# GRE Score
 gre_score = Select(browser.find_element_by_id('job_application_answers_attributes_6_answer_selected_options_attributes_6_question_option_id'))
 gre_score.select_by_visible_text(info['gre_score'])
 
-# gmat_score
+# GMAT Score
 gmat_score = Select(browser.find_element_by_id('job_application_answers_attributes_7_answer_selected_options_attributes_7_question_option_id'))
 gmat_score.select_by_visible_text(info['gmat_score'])
 
-# spacex_history
+# SpaceX Employment History
 spacex_history = Select(browser.find_element_by_id('job_application_answers_attributes_8_answer_selected_options_attributes_8_question_option_id'))
 spacex_history.select_by_visible_text(info['spacex_history'])
+
+# Years of Professional Work Experience
+work_exp = Select(browser.find_element_by_id('job_application_answers_attributes_10_answer_selected_options_attributes_10_question_option_id'))
+work_exp.select_by_visible_text(info['work_exp'])
+
+# Basic Qualifications Satisfied
+basic_qualifications = Select(browser.find_element_by_id('job_application_answers_attributes_11_boolean_value'))
+basic_qualifications.select_by_visible_text(info['basic_qualifications'])
+
+# How did you hear about this job?
+hear_job = Select(browser.find_element_by_id('job_application_answers_attributes_17_answer_selected_options_attributes_17_question_option_id'))
+hear_job.select_by_visible_text(info['hear_job'])
+
+# Legal authorization
+legal_auth = Select(browser.find_element_by_id('job_application_answers_attributes_19_answer_selected_options_attributes_19_question_option_id'))
+legal_auth.select_by_visible_text(info['legal_auth'])
+
+# Citizenship Status
+citizen_status = Select(browser.find_element_by_id('job_application_answers_attributes_20_answer_selected_options_attributes_20_question_option_id'))
+citizen_status.select_by_visible_text(info['citizen_status'])
+
+# Gender
+gender = Select(browser.find_element_by_id('job_application_gender'))
+gender.select_by_visible_text(info['gender'])
+
+
+# Hispanic/Latino
+hispanic_lat = Select(browser.find_element_by_id('job_application_hispanic_ethnicity'))
+hispanic_lat.select_by_visible_text(info['hispanic_lat'])
+
+
+# Veteran Status
+veteran = Select(browser.find_element_by_id('job_application_veteran_status'))
+veteran.select_by_visible_text(info['veteran'])
+
+
+# Disability Status
+disability = Select(browser.find_element_by_id('job_application_disability_status'))
+disability.select_by_visible_text(info['disability'])
