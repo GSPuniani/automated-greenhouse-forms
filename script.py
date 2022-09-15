@@ -41,14 +41,9 @@ if phone:
     phone.send_keys(info['phone'])
 
 # City
-# city = browser.find_element_by_xpath('//*[@id="job_application_location"]')
-# if city:
-#     city.send_keys(info['city'])
-
-# LinkedIn
-linkedin = browser.find_element_by_id("job_application_answers_attributes_15_text_value")
-if linkedin:
-    linkedin.send_keys(info['linkedin'])
+city = browser.find_element_by_id("auto_complete_input")
+if city:
+    city.send_keys(info['city'])
 
 # School
 # school = browser.find_element_by_xpath('//*[@id="s2id_autogen1"]')
@@ -148,9 +143,26 @@ basic_qualifications.select_by_visible_text(info['basic_qualifications'])
 commutable_relocate = Select(browser.find_element_by_id('job_application_answers_attributes_12_boolean_value'))
 commutable_relocate.select_by_visible_text(info['commutable_relocate'])
 
+# Active security clearances
+security_clearance = browser.find_element_by_id("s2id_autogen4")
+security_clearance.send_keys(info['security_clearance'])
+
+# LinkedIn
+linkedin = browser.find_element_by_id("job_application_answers_attributes_15_text_value")
+if linkedin:
+    linkedin.send_keys(info['linkedin'])
+
+# Additional link
+additional_link = browser.find_element_by_id("job_application_answers_attributes_16_text_value")
+additional_link.send_keys(info['additional_link'])
+
 # How did you hear about this job?
 hear_job = Select(browser.find_element_by_id('job_application_answers_attributes_17_answer_selected_options_attributes_17_question_option_id'))
 hear_job.select_by_visible_text(info['hear_job'])
+
+# Please specify name for referral
+referral_name = browser.find_element_by_id("job_application_answers_attributes_18_text_value")
+referral_name.send_keys(info['referral_name'])
 
 # Legal authorization
 legal_auth = Select(browser.find_element_by_id('job_application_answers_attributes_19_answer_selected_options_attributes_19_question_option_id'))
