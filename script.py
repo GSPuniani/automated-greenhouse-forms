@@ -24,29 +24,29 @@ with open('config.yml', 'r') as file:
 browser.get(info['url'])
 
 # First Name
-first_name = browser.find_element_by_xpath('//*[@id="first_name"]')
+first_name = browser.find_element_by_id("first_name")
 first_name.send_keys(info['first_name'])
 
 # Last Name
-last_name = browser.find_element_by_xpath('//*[@id="last_name"]')
+last_name = browser.find_element_by_id("last_name")
 last_name.send_keys(info['last_name'])
 
 # Email
-email = browser.find_element_by_xpath('//*[@id="email"]')
+email = browser.find_element_by_id("email")
 email.send_keys(info['email'])
 
 # Phone
-phone = browser.find_element_by_xpath('//*[@id="phone"]')
+phone = browser.find_element_by_id("phone")
 if phone:
     phone.send_keys(info['phone'])
 
 # City
-city = browser.find_element_by_xpath('//*[@id="job_application_location"]')
-if city:
-    city.send_keys(info['city'])
+# city = browser.find_element_by_xpath('//*[@id="job_application_location"]')
+# if city:
+#     city.send_keys(info['city'])
 
 # LinkedIn
-linkedin = browser.find_element_by_xpath('//*[@id="job_application_answers_attributes_15_text_value"]')
+linkedin = browser.find_element_by_id("job_application_answers_attributes_15_text_value")
 if linkedin:
     linkedin.send_keys(info['linkedin'])
 
@@ -56,28 +56,50 @@ if linkedin:
 #     school.send_keys(info['school'])
 
 # Degree 
-degree = Select(browser.find_element_by_id('education_degree_0'))
-degree.select_by_visible_text(info['degree'])
+# degree = Select(browser.find_element_by_id('education_degree_0'))
+# degree.select_by_visible_text(info['degree'])
 
-# Discipline
-discipline = Select(browser.find_element_by_id('education_discipline_0'))
-discipline.select_by_visible_text(info['discipline'])
+# # Discipline
+# discipline = Select(browser.find_element_by_id('education_discipline_0'))
+# discipline.select_by_visible_text(info['discipline'])
 
-# Start Date
-start_month = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[4]/fieldset/input[1]')
-if start_month:
-    start_month.send_keys(info['start_month'])
-start_year = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[4]/fieldset/input[2]')
-if start_year:
-    start_year.send_keys(info['start_year'])
+# Start Date 1
+start_month1 = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[4]/fieldset/input[1]')
+if start_month1:
+    start_month1.send_keys(info['start_month'])
+start_year1 = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[4]/fieldset/input[2]')
+if start_year1:
+    start_year1.send_keys(info['start_year1'])
 
-# End Date
-end_month = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[5]/fieldset/input[1]')
-if end_month:
-    end_month.send_keys(info['end_month'])
-end_year = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[5]/fieldset/input[2]')
-if end_year:
-    end_year.send_keys(info['end_year'])
+# End Date 1
+end_month1 = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[5]/fieldset/input[1]')
+if end_month1:
+    end_month1.send_keys(info['end_month'])
+end_year1 = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[5]/fieldset/input[2]')
+if end_year1:
+    end_year1.send_keys(info['end_year1'])
+
+# Add another education
+another_ed = browser.find_element_by_id('add_education')
+another_ed.click()
+
+# Start Date 2
+start_month2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[4]/fieldset/input[1]')
+if start_month2:
+    start_month2.send_keys(info['start_month'])
+start_year2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[4]/fieldset/input[2]')
+if start_year2:
+    start_year2.send_keys(info['start_year2'])
+
+# End Date 2
+end_month2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[5]/fieldset/input[1]')
+if end_month2:
+    end_month2.send_keys(info['end_month'])
+end_year2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[5]/fieldset/input[2]')
+if end_year2:
+    end_year2.send_keys(info['end_year2'])
+
+
 
 # Confirm all information is true by clicking checkbox
 browser.find_element_by_xpath('//*[@id="job_application_answers_attributes_0_answer_selected_options_attributes_0_question_option_id"]').click()
@@ -121,6 +143,10 @@ work_exp.select_by_visible_text(info['work_exp'])
 # Basic Qualifications Satisfied
 basic_qualifications = Select(browser.find_element_by_id('job_application_answers_attributes_11_boolean_value'))
 basic_qualifications.select_by_visible_text(info['basic_qualifications'])
+
+# Are you within commutable distance or willing to relocate?
+commutable_relocate = Select(browser.find_element_by_id('job_application_answers_attributes_12_boolean_value'))
+commutable_relocate.select_by_visible_text(info['commutable_relocate'])
 
 # How did you hear about this job?
 hear_job = Select(browser.find_element_by_id('job_application_answers_attributes_17_answer_selected_options_attributes_17_question_option_id'))
