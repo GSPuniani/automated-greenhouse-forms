@@ -53,12 +53,10 @@ if city:
 # Degree 
 # degree1 = browser.find_element_by_id('s2id_autogen2')
 # degree1.send_keys(info['degree1'])
-# degree1.click()
 
 # Discipline
 # discipline1 = browser.find_element_by_id('s2id_autogen3')
 # discipline1.send_keys(info['discipline1'])
-# discipline1.click()
 
 # Start Date 1
 start_month1 = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[4]/fieldset/input[1]')
@@ -77,24 +75,24 @@ if end_year1:
     end_year1.send_keys(info['end_year1'])
 
 # Add another education
-another_ed = browser.find_element_by_id('add_education')
-another_ed.click()
+# another_ed = browser.find_element_by_id('add_education')
+# another_ed.click()
 
-# Start Date 2
-start_month2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[4]/fieldset/input[1]')
-if start_month2:
-    start_month2.send_keys(info['start_month'])
-start_year2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[4]/fieldset/input[2]')
-if start_year2:
-    start_year2.send_keys(info['start_year2'])
+# # Start Date 2
+# start_month2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[4]/fieldset/input[1]')
+# if start_month2:
+#     start_month2.send_keys(info['start_month'])
+# start_year2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[4]/fieldset/input[2]')
+# if start_year2:
+#     start_year2.send_keys(info['start_year2'])
 
-# End Date 2
-end_month2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[5]/fieldset/input[1]')
-if end_month2:
-    end_month2.send_keys(info['end_month'])
-end_year2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[5]/fieldset/input[2]')
-if end_year2:
-    end_year2.send_keys(info['end_year2'])
+# # End Date 2
+# end_month2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[5]/fieldset/input[1]')
+# if end_month2:
+#     end_month2.send_keys(info['end_month'])
+# end_year2 = browser.find_element_by_xpath('//*[@id="education_section"]/div[2]/fieldset/div[5]/fieldset/input[2]')
+# if end_year2:
+#     end_year2.send_keys(info['end_year2'])
 
 
 
