@@ -46,17 +46,19 @@ if city:
     city.send_keys(info['city'])
 
 # School
-# school = browser.find_element_by_xpath('//*[@id="s2id_autogen1"]')
-# if school:
-#     school.send_keys(info['school'])
+# school1 = browser.find_element_by_id('s2id_autogen1_search')
+# if school1:
+#     school1.send_keys(info['school1'])
 
 # Degree 
-# degree = Select(browser.find_element_by_id('education_degree_0'))
-# degree.select_by_visible_text(info['degree'])
+# degree1 = browser.find_element_by_id('s2id_autogen2')
+# degree1.send_keys(info['degree1'])
+# degree1.click()
 
-# # Discipline
-# discipline = Select(browser.find_element_by_id('education_discipline_0'))
-# discipline.select_by_visible_text(info['discipline'])
+# Discipline
+# discipline1 = browser.find_element_by_id('s2id_autogen3')
+# discipline1.send_keys(info['discipline1'])
+# discipline1.click()
 
 # Start Date 1
 start_month1 = browser.find_element_by_xpath('//*[@id="education_section"]/div[1]/fieldset/div[4]/fieldset/input[1]')
